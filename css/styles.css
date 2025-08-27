@@ -69,6 +69,7 @@ body {
     display: flex;
     list-style: none;
     gap: 2.5rem;
+    align-items: center;
 }
 
 .nav-links a {
@@ -97,6 +98,20 @@ body {
 
 .nav-links a:hover::after {
     width: 100%;
+}
+
+#auth-links a, #user-info a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    transition: color 0.3s ease;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}
+
+#auth-links a#signup-btn {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: var(--white);
 }
 
 .mobile-menu {
@@ -640,6 +655,46 @@ body {
 }
 
 /* =================
+   Modals
+   ================= */
+.modal {
+    position: fixed;
+    z-index: 1001;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 2rem;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 15px;
+    position: relative;
+}
+
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/* =================
    Animations
    ================= */
 @keyframes fadeInUp {
@@ -693,6 +748,10 @@ body {
 
     .mobile-menu {
         display: flex;
+    }
+
+    #auth-links {
+        display: none;
     }
 
     .search-container {
