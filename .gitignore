@@ -3,6 +3,8 @@ node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
 
 # Environment variables
 .env
@@ -10,13 +12,19 @@ yarn-error.log*
 .env.development.local
 .env.test.local
 .env.production.local
+*.local
 
 # IDE and Editor files
-.vscode/settings.json
+.vscode/*
+!.vscode/extensions.json
+!.vscode/launch.json
+!.vscode/settings.json
 .idea/
 *.swp
 *.swo
 *~
+*.sublime-workspace
+*.sublime-project
 
 # OS generated files
 .DS_Store
@@ -26,24 +34,74 @@ yarn-error.log*
 .Trashes
 ehthumbs.db
 Thumbs.db
+desktop.ini
 
 # Logs
+logs/
+*.log
 logs
 *.log
+npm-debug.log*
+pnpm-debug.log*
+lerna-debug.log*
 
 # Firebase
 .firebase/
 firebase-debug.log
 .firebaserc
+firebase-debug.*.log
 
 # Build outputs
 dist/
+dist-ssr/
 build/
+out/
+*.local
 
 # Temporary files
 *.tmp
 *.temp
+.temp/
+.tmp/
 
 # Cache
 .cache/
 .parcel-cache/
+.turbo/
+.next/
+.nuxt/
+.vuepress/dist/
+.serverless/
+.fusebox/
+.dynamodb/
+.tern-port
+.vscode-test/
+.yarn/cache/
+.yarn/unplugged/
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp.*
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+postgres-data/
+
+# Prisma
+apps/backend/prisma/migrations/dev/
+apps/backend/prisma/*.db
+apps/backend/prisma/*.db-journal
+
+# Testing
+coverage/
+.nyc_output/
+
+# Production
+*.production
+build/
+
+# Miscellaneous
+.eslintcache
+.stylelintcache
+*.tsbuildinfo
